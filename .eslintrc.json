@@ -1,0 +1,56 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "airbnb-base",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "prettier"
+    ],
+    "rules": {
+      "import/no-extraneous-dependencies": [
+         "off",
+         {
+            "devDependencies": false,
+            "optionalDependencies": false,
+            "peerDependencies": false
+            }
+         ],
+      "import/no-unresolved": [ 2, {"ignore": ["@"]} ],
+      "@typescript-eslint/no-var-requires": "off",
+      "no-plusplus": "off",
+      "prefer-const": "off",
+      "no-unused-vars": ["warn", { "argsIgnorePattern": "val|req|res" } ],
+      "strict": "off",
+      "semi": "error",
+      "no-console": "off",
+      "no-underscore-dangle": "off",
+      "max-len": ["error",
+            {
+            "code": 80,
+            "ignoreUrls": true,
+            "ignoreComments": true
+            }
+         ],
+      "quotes": [
+         "error",
+         "single",
+         { "avoidEscape": true, "allowTemplateLiterals": false }
+      ]
+    }
+}
